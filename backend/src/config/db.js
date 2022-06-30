@@ -11,7 +11,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
     idle: 10000,
   },
   // SQLite only
-  storage: './config/database.sqlite',
+  storage: './databases/database.sqlite',
 });
 
 export default sequelize;

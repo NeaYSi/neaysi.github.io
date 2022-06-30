@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 import sequelize from '../config/db.js';
 
-const Student = sequelize.define('student', {
+const User = sequelize.define('user', {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -24,6 +24,13 @@ const Student = sequelize.define('student', {
       notEmpty: true,
     },
   },
+  role: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
 });
 
-export default Student;
+export default User;
